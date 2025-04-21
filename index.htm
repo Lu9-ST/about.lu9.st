@@ -26,7 +26,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <style> 
-	#aboutheader-ptbr, #nav-pt-br, #links-ptbr, #byf-list1-ptbr, #byf-list2-ptbr, #pix-qr, .text-ptbr, .text2-ptbr, .style8, .char-bio-ptbr, .btn2-ptbr {
+	#aboutheader-ptbr, #nav-ptbr, #links-ptbr, #byf-list1-ptbr, #byf-list2-ptbr, #pix-qr, .text-ptbr, .text2-ptbr, .style8, .char-bio-ptbr, .btn2-ptbr {
 	display: none;
 	}
 	
@@ -944,7 +944,7 @@ kofiWidgetOverlay.draw('lu9_st', {
 		v.style.display = "none";
 		}
 		function show (v) {
-		v.style.display = "initial";
+		v.style.display = "inherit";
 		}
 		document.getElementById("divider01").style.visibility = "hidden";
 		if (window.location.href.indexOf("pt-br") > -1) {
@@ -960,18 +960,18 @@ kofiWidgetOverlay.draw('lu9_st', {
 		document.getElementById("byf-list2-en").style.display = "none";
 		document.getElementById("byf-list1-en").style.display = "none";
 		//Show Portuguese Sections
-		document.getElementById("aboutheader-ptbr").style.display = "initial";
+		document.getElementById("aboutheader-ptbr").style.display = "inherit";
 		Array.from(document.getElementsByClassName("text-ptbr")).forEach(show);
 		Array.from(document.getElementsByClassName("text2-ptbr")).forEach(show);
 		Array.from(document.getElementsByClassName("style8")).forEach(show);
 		Array.from(document.getElementsByClassName("char-bio-ptbr")).forEach(show);
 		Array.from(document.getElementsByClassName("char-name-ptbr")).forEach(show);
 		Array.from(document.getElementsByClassName("btn2-ptbr")).forEach(show);
-		document.getElementById("nav-ptbr").style.display = "initial";
-		document.getElementById("links-ptbr").style.display = "initial";
-		document.getElementById("byf-list2-ptbr").style.display = "initial";
-		document.getElementById("byf-list1-ptbr").style.display = "initial";
-		document.getElementById("pix-qr").style.display = "initial";
+		document.getElementById("nav-ptbr").style.display = "inherit";
+		document.getElementById("links-ptbr").style.display = "inherit";
+		document.getElementById("byf-list2-ptbr").style.display = "inherit";
+		document.getElementById("byf-list1-ptbr").style.display = "inherit";
+		document.getElementById("pix-qr").style.display = "inherit";
 		
 		//Translate some stuff manually lol
 		var text = document.getElementById("interests1").innerHTML;
