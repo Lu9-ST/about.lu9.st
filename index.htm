@@ -24,9 +24,44 @@
 <link href="assets/carrd.css" rel="stylesheet" type="text/css">
 <noscript><link href="assets/carrd_noscript.css" rel="stylesheet" type="text/css"></noscript>
 <meta name="mobile-web-app-capable" content="yes">
-<style> img.emoji { display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 .07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0 !important; } .emojis { margin-bottom: 20px; font-size: 32px; } #languagebtn a { -webkit-user-select: none; user-select: none; cursor: default; } .buttons li a { -webkit-user-select: none; user-select: none; cursor: default; } .icons li a { cursor: default; } #text40 a, #text01 a, #text23 a, #text33 a { cursor: help; }
+
+<style> 
+	#aboutheader-ptbr, #nav-pt-br, #links-ptbr, #byf-list1-ptbr, #byf-list2-ptbr, #pix-qr, .text-ptbr, .text2-ptbr, .style8, .char-bio-ptbr, .btn2-ptbr {
+	display: none;
+	}
+	
+	img.emoji { 
+	display: inline !important; 
+	border: none !important; 
+	box-shadow: none !important; 
+	height: 1em !important; 
+	width: 1em !important; 
+	margin: 0 .07em !important; 
+	vertical-align: -0.1em !important; 
+	background: none !important; 
+	padding: 0 !important;
+} 
+	.emojis { 
+	margin-bottom: 20px; 
+	font-size: 32px;
+}
+	#languagebtn a {
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+	.buttons li a {
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+	.icons li a {
+	cursor: default;
+}
+	#text40 a, #text01 a, #text23 a, #text33 a {
+	cursor: help;
+	}
 </style>
-<!--<link href="assets/floating-chat-wrapper.css" rel="stylesheet" type="text/css">-->
 <link href="assets/css.css" rel="stylesheet" type="text/css">
 </head>
 <body class="is-ready">
@@ -45,7 +80,7 @@
 <a href="#" class="frame" oncontextmenu="return false;" ondragstart="return false;"><img src="assets/aboutheader-ptbr.svg" alt="sobre Lu9" oncontextmenu="return false;" ondragstart="return false;"></a>
 </div>
 <div id="noscript1">
-<noscript><p class="text-en">Warning! JavaScript is needed for the separate languages and separate sections to work! Please whitelist this page, thank you ❤</p></noscript>
+<noscript><p class="text-en">Warning! JavaScript is used for the separate languages to work! Please whitelist this page, thank you ❤</p></noscript>
 </div>
 <div id="languagebtn" class="container columns">
 <div class="wrapper">
@@ -908,8 +943,9 @@ kofiWidgetOverlay.draw('lu9_st', {
 		function hide (v) {
 		v.style.display = "none";
 		}
-		//document.getElementById("btn-en").title = "In English";
-		//document.getElementById("btn-ptbr").title = "Em Português";
+		function show (v) {
+		v.style.display = "initial";
+		}
 		document.getElementById("divider01").style.visibility = "hidden";
 		if (window.location.href.indexOf("pt-br") > -1) {
 		//Remove English Sections
@@ -923,6 +959,19 @@ kofiWidgetOverlay.draw('lu9_st', {
 		document.getElementById("links-en").style.display = "none";
 		document.getElementById("byf-list2-en").style.display = "none";
 		document.getElementById("byf-list1-en").style.display = "none";
+		//Show Portuguese Sections
+		document.getElementById("aboutheader-ptbr").style.display = "initial";
+		Array.from(document.getElementsByClassName("text-ptbr")).forEach(show);
+		Array.from(document.getElementsByClassName("text2-ptbr")).forEach(show);
+		Array.from(document.getElementsByClassName("style8")).forEach(show);
+		Array.from(document.getElementsByClassName("char-bio-ptbr")).forEach(show);
+		Array.from(document.getElementsByClassName("char-name-ptbr")).forEach(show);
+		Array.from(document.getElementsByClassName("btn2-ptbr")).forEach(show);
+		document.getElementById("nav-ptbr").style.display = "initial";
+		document.getElementById("links-ptbr").style.display = "initial";
+		document.getElementById("byf-list2-ptbr").style.display = "initial";
+		document.getElementById("byf-list1-ptbr").style.display = "initial";
+		document.getElementById("pix-qr").style.display = "initial";
 		
 		//Translate some stuff manually lol
 		var text = document.getElementById("interests1").innerHTML;
@@ -951,22 +1000,6 @@ kofiWidgetOverlay.draw('lu9_st', {
 		res = text.replace("bad end theater", "teatro dos finais infelizes");
 		text = res;
 		document.getElementById("interests3").innerHTML = text;
-		}
-		else
-		{
-		//Remove Portuguese Sections
-		document.getElementById("aboutheader-ptbr").style.display = "none";
-		Array.from(document.getElementsByClassName("text-ptbr")).forEach(hide);
-		Array.from(document.getElementsByClassName("text2-ptbr")).forEach(hide);
-		Array.from(document.getElementsByClassName("style8")).forEach(hide);
-		Array.from(document.getElementsByClassName("char-bio-ptbr")).forEach(hide);
-		Array.from(document.getElementsByClassName("char-name-ptbr")).forEach(hide);
-		Array.from(document.getElementsByClassName("btn2-ptbr")).forEach(hide);
-		document.getElementById("nav-ptbr").style.display = "none";
-		document.getElementById("links-ptbr").style.display = "none";
-		document.getElementById("byf-list2-ptbr").style.display = "none";
-		document.getElementById("byf-list1-ptbr").style.display = "none";
-		document.getElementById("pix-qr").style.display = "none";
 		}
 		</script>
 </body>
