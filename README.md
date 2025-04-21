@@ -5,3 +5,4 @@ Carrd reworking
 - [ ] Reduce unnecessary CSS and JS carried over
 - [ ] Use original PNGs for JPG-fied images
 - [ ] Split sections into separate HTML pages
+- [ ] Page transitions (chrome only?)
